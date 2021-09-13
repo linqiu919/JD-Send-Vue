@@ -1,4 +1,4 @@
-# jdsend
+# JD-Send-Vue
 
 ## Project setup
 ```
