@@ -17,7 +17,7 @@
           <el-card class="box-card">
            <h1 style="font-size: 10px">
              <el-link href="https://docs.qq.com/doc/DSWNpcFRYZGJsU3lF" target="_blank" type="success" :underline="false">
-             点击查看京东wskey抓取教程 | 使用第一种方法
+             点击查看京东wskey抓取教程 | 使用第二种方法
            </el-link>
            </h1>
           </el-card>
@@ -30,7 +30,7 @@
               <span style="font-weight: 700">提交数据 | JD-Send</span>
             </div>
             <div class="text-item">
-              <el-form :model="formData" :rules="rules"  ref="form" label-width="100px" class="demo-ruleForm">
+              <el-form :model="formData" :rules="rules"  ref="form"  label-width="100px" class="demo-ruleForm">
                 <el-form-item
                     label="输入京东数据:"
                     prop="sendTxt">
@@ -50,6 +50,7 @@
                 </el-form-item>
 
                 <el-form-item>
+                  <el-button type="warning" size="medium" @click="reset" >重置</el-button>
                   <el-button type="success" size="medium" @click="submitForm" >提交</el-button>
                 </el-form-item>
               </el-form>
@@ -115,6 +116,11 @@ export default {
             }
         })
     },
+    reset(){
+      // 重置表单
+      Object.assign(this.$data.formData, this.$options.data().formData)
+      this.$refs['form'].resetFields()
+    }
   }
 }</script>
 
@@ -233,10 +239,10 @@ body > .el-container {
     min-width: 300px !important;
   }
   .el-alert{
-    width: 370px !important;
+    width: 380px !important;
   }
   .el-card{
-    width: 370px !important;
+    width: 380px !important;
   }
 
 }

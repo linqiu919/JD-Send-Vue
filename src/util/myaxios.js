@@ -5,8 +5,8 @@ import {Notification} from "element-ui";
 import router from "@/router";
 //创建axios实例
 const newaxios = axios.create({
-    baseURL: 'http://47.100.93.1:10086',
-    timeout: 10000,
+    baseURL: 'http://0.0.0.0:10086',
+    timeout: 1000,
 });
 
 // Add a request interceptor
