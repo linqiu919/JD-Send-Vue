@@ -117,8 +117,7 @@ export default {
         })
     },
     reset(){
-      // 重置表单
-      Object.assign(this.$data.formData, this.$options.data().formData)
+      // 重置表单并清空校验
       this.$refs['form'].resetFields()
     }
   }
